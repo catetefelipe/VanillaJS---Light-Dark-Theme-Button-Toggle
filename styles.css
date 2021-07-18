@@ -1,0 +1,69 @@
+/* ----- ajusta o círculo para que fique alinhado com a label ----- */
+* {
+	box-sizing: border-box;
+}
+
+
+/* ----- body padrão ----- */
+body {
+	background-color: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	transition: 0.2s;
+}
+
+
+/* ----- esse body será ativado quando houver uma chamada que vem a partir do clique no botão ----- */
+body.dark {
+	background-color: #292C35;
+}
+
+
+
+
+
+/* ----- remove o quadradinho do checkbox do input para que nós possamos utilizar o input apenas utilizá-lo para criar lógica ----- */
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+
+/* ----- espaço que comporta o círculo branco ----- */
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+
+/* ----- circulo branco ----- */
+.label .circle {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+
+/* ----- faz com que o círculo dentro da label se mova ----- */
+/* ----- lembrando que o :checked funciona como uma ativação, marcação de um input ----- */
+.checkbox:checked + .label .circle {
+	transform: translateX(24px);
+}

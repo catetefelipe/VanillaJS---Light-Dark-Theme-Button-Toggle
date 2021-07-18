@@ -1,0 +1,47 @@
+/* ========== classList ========== */
+- Essa propriedade é útil para adicionar, remover e alternar classes CSS em um elemento, ou seja, mudar as classes
+
+EXEMPLO
+document.getElementById("mydiv").classList.add("mystyle");
+
+
+
+
+
+
+
+
+
+
+/* ========== toggle() ========== */
+- Como o próprio nome diz em inglês, toggle quer dizer alternância
+- Ele faz uma alternância entre exibir um elemento e ocultá-lo baseado na classe presente no CSS
+
+
+
+
+
+
+
+
+
+
+/* ========== .classList.toggle() quando justos ========== */
+- basta aoenas fazer uma junção da ação que os dois causam, ou seja, um muda classes CSS e o outro cria uma alternância
+
+
+
+
+
+
+
+
+
+
+/* ========== forma antiga de se escrever uma função JavaScript ========== */
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
+-----> Aqui só faltou adicionar uma chamada para a função lá no nosso elemento no HTML, como: onClick()
